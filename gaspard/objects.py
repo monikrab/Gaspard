@@ -15,7 +15,7 @@ class Point:
         if len(args) == 4 and all(isinstance(arg, (float, int)) for arg in args[1:]):
             self.ab, self.af, self.ct = map(float, args[1:])
 
-            P1 = Coord(self.ab, -self.af); P2 = Coord(self.ab, self.ct)
+            P1 = Coord(-self.ab, -self.af); P2 = Coord(-self.ab, self.ct)
 
             # Marker at P1
             plt.plot(P1.x, P1.y, "o", ms=2, c='k')
